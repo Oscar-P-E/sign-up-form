@@ -1,0 +1,15 @@
+.container {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  grid-template-areas: "side main";
+}
+
+main {
+  grid-area: main;
+  background-color: red;
+}
+
+.side-banner {
+  grid-area: side;
+  background-color: green;
+}
