@@ -1,22 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="normalize.css" />
-        <link rel="stylesheet" href="styles.css" />
-        <title>Signup form</title>
-    </head>
-    <body>
-        <div class="container">
-            <div class="side-banner">
-                <div class="logo-container">
-                        <div class="logo-image"><img src="img/odin-lined.png" alt="odin logo" class="odin-logo"></div>
-                        <div class="logo-text">ODIN</div>
-                </div>
-            </div>
-            <main>main</main>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Signup form</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="side-banner">
+        <div class="logo-container">
+          <div class="logo-image">
+            <img src="img/odin-lined.png" alt="odin logo" class="odin-logo" />
+          </div>
+          <div class="logo-text">ODIN</div>
         </div>
-    </body>
+        <!-- end logo-container -->
+      </div>
+      <!-- end side-banner -->
+      <main>
+        <div class="main-top">
+          <p class="top-text">
+            This is not a real form. Fill out your details for no reason at all.
+            Lorem ipsum dolor sit amet, consectetur adipis. This is not a real
+            form.
+            <br />
+            <br />
+            This is a <em>sentence</em>!
+          </p>
+        </div>
+        <!-- end main-top -->
+        <div class="main-middle">
+          <div class="middle-stuff">
+            Here we go!
+            <form class="form-container" id="my-form" action="#" method="post">
+              <div class="form-element-group">
+                <label for="first-name" class="form-label">First Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="first-name"
+                  name="first-name"
+                  required
+                />
+              </div>
+              <div class="form-element-group">
+                <label for="last-name" class="form-label">Last Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="last-name"
+                  name="last-name"
+                  required
+                />
+              </div>
+              <div class="form-element-group">
+                <label for="email" class="form-label">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  name="email"
+                  required
+                />
+              </div>
+              <div class="form-element-group">
+                <label for="phone-number" class="form-label"
+                  >Phone Number</label
+                >
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="phone-number"
+                  name="phone-number"
+                  required
+                />
+              </div>
+              <div class="form-element-group">
+                <label for="password" class="form-label">Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="password"
+                  name="password"
+                  required
+                />
+              </div>
+              <div class="form-element-group">
+                <label for="confirm-password" class="form-label"
+                  >Confirm Password</label
+                >
+                <input
+                  type="password"
+                  class="form-control"
+                  id="confirm-password"
+                  name="confirm-password"
+                  required
+                />
+              </div>
+            </form>
+            <!-- end form-container -->
+            <p
+              id="error-message-password"
+              class="error-message error-message-password"
+            ></p>
+            <p
+              id="error-message-phone"
+              class="error-message error-message-phone"
+            ></p>
+            <script src="scripts.js"></script>
+          </div>
+          <!-- end main-stuff -->
+        </div>
+        <!-- end main-middle -->
+        <div class="main-bottom">
+          <button
+            class="button"
+            id="create-account-button"
+            type="submit"
+            form="my-form"
+          >
+            Create Account
+          </button>
+          <p class="login-text">
+            Already have an account? <a href="index.html">Log in</a>
+          </p>
+        </div>
+        <!-- end main-bottom -->
+      </main>
+    </div>
+    <!-- end container -->
+  </body>
 </html>

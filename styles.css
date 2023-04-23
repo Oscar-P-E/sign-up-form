@@ -1,50 +1,159 @@
 @font-face {
-    font-family: "Norse-Bold";
-    src: url("fonts/Norse-Bold.otf") format("opentype");
-    /* font-weight: normal; */
-    /* font-style: normal; */
+  font-family: "Norse-Bold";
+  src: url("fonts/Norse-Bold.otf") format("opentype");
+  /* font-weight: normal; */
+  /* font-style: normal; */
+}
+
+:root {
+  --accent-color-1: #596d48;
+  --very-light-grey: hsl(0, 0%, 97%);
+  --input-border-color: #e5e7eb;
+}
+
+p {
+  line-height: 1.33;
 }
 
 .container {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-areas: "side main";
-}
-
-main {
-    grid-area: main;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-areas: "side main";
 }
 
 .side-banner {
-    grid-area: side;
-    background-image: url("img/tree-leaves-background.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 100vh;
-    position: relative;
+  grid-area: side;
+  background-image: url("img/tree-leaves-background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
 }
 
 .logo-container {
-    background-color: hsla(0, 0%, 0%, 0.5);
-    position: absolute;
-    top: 30%;
-    width: 100%;
-    height: 150px;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    /* gap: 10px; */
+  background-color: hsla(0, 0%, 0%, 0.5);
+  position: absolute;
+  top: 20%;
+  width: 100%;
+  height: 150px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
 }
 
 .odin-logo {
-    max-height: 120px;
+  max-height: 120px;
 }
 
 .logo-text {
-    font-family: Norse-Bold;
-    color: white;
-    font-size: 5.5rem;
+  font-family: Norse-Bold;
+  color: white;
+  font-size: 5.5rem;
+}
+
+main {
+  grid-area: main;
+  display: grid;
+  grid-template-rows: minmax(35% 40%) auto minmax(25%, 30%);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.main-top {
+  background-color: var(--very-light-grey);
+  padding: 2.5rem;
+  display: flex;
+}
+
+.top-text {
+  align-self: end;
+  max-width: 55ch;
+}
+
+.main-middle {
+  padding: 2.5rem;
+  padding-top: 1.5rem;
+}
+
+.form-container {
+  margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(150px, 250px));
+  grid-template-rows: auto;
+  row-gap: 1.5rem;
+  column-gap: 3rem;
+  font-size: 1.25rem;
+  font-weight: regular;
+}
+
+.form-element-group {
+  display: grid;
+  max-width: 300px;
+}
+
+.form-control {
+  border: 1px solid var(--input-border-color);
+}
+
+.main-bottom {
+  background-color: var(--very-light-grey);
+  padding-left: 2.5rem;
+  padding-top: 2rem;
+  box-shadow: 0px 10px 10px -12px rgba(0, 0, 0, 0.5) inset;
+}
+
+.form-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  color: hsl(0, 0%, 33%);
+  margin-bottom: 0.1rem;
+}
+
+.button {
+  border-radius: 10px;
+  height: 50px;
+  width: 233px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: white;
+  background-color: var(--accent-color-1);
+  border: none;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  /* offset-x | offset-y | blur-radius | color */
+}
+
+.login-text {
+  margin-top: 2rem;
+  font-size: 1.2rem;
+}
+
+.login-text a {
+  text-decoration: none;
+  color: var(--accent-color-1);
+}
+
+.error-message {
+  color: red;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+  /* display: none; */
+}
+
+.invalid {
+  border: 1px solid red;
+  outline: none; /* Removes the default browser outline */
+}
+
+input:focus {
+  outline: none; /* Removes the default browser outline */
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+input:focus:not(.invalid) {
+  border: 1px solid blue;
 }
